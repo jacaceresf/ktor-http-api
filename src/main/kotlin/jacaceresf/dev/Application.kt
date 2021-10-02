@@ -6,6 +6,7 @@ import io.ktor.routing.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import jacaceresf.dev.database.DatabaseFactory
 import jacaceresf.dev.plugins.*
 import jacaceresf.dev.routes.registerCustomerRoutes
 import jacaceresf.dev.routes.registerOrderRoutes
@@ -23,5 +24,8 @@ fun Application.module(testing: Boolean = false) {
     ///we need to register the routes so Ktor can know about them.
     registerCustomerRoutes()
     registerOrderRoutes()
+
+    DatabaseFactory.init()
+
 }
 

@@ -10,6 +10,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -20,6 +21,9 @@ dependencies {
 
     testImplementation "io.ktor:ktor-server-test-host:$ktor_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test"
+    compile "org.jetbrains.exposed:exposed:0.12.1"
+    compile 'com.zaxxer:HikariCP:2.7.8'
+    compile "org.postgresql:postgresql:42.2.2"
 }
 
 compileKotlin {
