@@ -1,0 +1,17 @@
+POST http://localhost:8080/customer
+Content-Type: application/json
+
+{
+  "id": 100,
+  "firstName": "Jorge",
+  "lastName": "Caceres",
+  "email": "jorge97caceres@gmail.com"
+}
+
+###
+GET http://localhost:8080/customer
+Accept: application/json
+
+###
+GET http://localhost:8080/customer/100
+Accept: application/json
